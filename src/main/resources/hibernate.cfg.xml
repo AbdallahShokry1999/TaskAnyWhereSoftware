@@ -1,0 +1,28 @@
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <!-- Database connection settings -->
+        <property name="hibernate.connection.driver_class">com.mysql.cj.jdbc.Driver</property>
+        <property name="hibernate.connection.url">jdbc:mysql://localhost:3306/mydatabase</property>
+        <property name="hibernate.connection.username">myuser</property>
+        <property name="hibernate.connection.password">mypassword</property>
+
+        <!-- Hibernate dialect for MySQL -->
+        <property name="hibernate.dialect">org.hibernate.dialect.MySQL5Dialect</property>
+
+        <!-- Echo all executed SQL to stdout -->
+        <property name="hibernate.show_sql">true</property>
+
+        <!-- Drop and re-create the database schema on startup -->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+
+        <!-- Mapping files -->
+        <!-- Add mapping resources for your entity classes here -->
+        <!-- <mapping resource="com/example/model/Student.hbm.xml"/> -->
+        <!-- <mapping resource="com/example/model/Teacher.hbm.xml"/> -->
+        <!-- <mapping resource="com/example/model/Quiz.hbm.xml"/> -->
+        <!-- <mapping resource="com/example/model/Course.hbm.xml"/> -->
+    </session-factory>
+</hibernate-configuration>
